@@ -67,9 +67,11 @@ void PlayScene::Start()
 
 	//game objescts
 	m_pStarShip = new StarShip();
+	m_pStarShip->GetTransform()->position = glm::vec2(150.0f, 300.0f);
 	AddChild(m_pStarShip);
 
 	m_pTarget = new Target();
+	m_pTarget->GetTransform()->position = glm::vec2(600.0f, 300.0f);
 	AddChild(m_pTarget);
 
 
@@ -107,7 +109,7 @@ void PlayScene::GUI_Function()
 	// See examples by uncommenting the following - also look at imgui_demo.cpp in the IMGUI filter
 	//ImGui::ShowDemoWindow();
 	
-	ImGui::Begin("GAME3001 - W2023 - Lab4", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar );
+	ImGui::Begin("GAME3001 - W2023 - Lab6.1", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar );
 
 	ImGui::Separator();
 
